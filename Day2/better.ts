@@ -10,8 +10,7 @@ let pointsDiff: number = 0;
 //1 for Rock, 2 for Paper, and 3 for Scissors
 //0 if you lost, 3 if the round was a draw, and 6 if you won
 
-for (let line of input) {
-    if(!line) continue;
+input.forEach(line => {
     let [opponent, myself] = line.split(' ');
     switch(opponent) {
         case "A": //Rock
@@ -53,6 +52,6 @@ for (let line of input) {
     }
     console.log((pointsDiff > 6 ? "Win" : ( pointsDiff > 3 ? "Tie" : "Lost")), line.replace('B', 'Paper').replace('C', 'Scissors').replace('A', 'Rock').replace('X', 'Rock').replace('Y', 'Paper').replace('Z', 'Scissors'));
     console.log("Points:", points, "PointsDiff:", pointsDiff);
-}
+});
 
 console.log("p1", points);

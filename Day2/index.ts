@@ -58,7 +58,7 @@ function p1() {
 
     console.log("p1", won, tied, lost, points);
 }
-
+p1()
 function p2() {
     let won: number = 0;
     let tied: number = 0;
@@ -107,3 +107,5 @@ function p2() {
 
     console.log("p2", won, tied, lost, points);
 }
+
+p2()
