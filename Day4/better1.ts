@@ -12,7 +12,7 @@ function p1() {
 
     let valid = -1;
 
-    input.forEach(line => line.split(',').map(x => range(parseInt(x.split('-')[0]), parseInt(x.split('-')[1]))).some((el, i, [a,b]) => a.every(el => b.includes(el)) || b.every(el => a.includes(el)) ? valid++ : null))
+    input.forEach(line => line.split(',').map(x => range(parseInt(x.split('-')[0]), parseInt(x.split('-')[1]))).some((_, i, [a,b]) => a.every(el => b.includes(el)) || b.every(el => a.includes(el)) ? valid++ : null))
 
     console.log(valid)
 
@@ -24,7 +24,7 @@ function p2() {
     
     let valid = -1;
 
-    input.forEach(line => line.split(',').map(x => range(parseInt(x.split('-')[0]), parseInt(x.split('-')[1]))).some((el, i, [a,b]) => a.some(el => b.includes(el)) ? valid++ : null));
+    input.forEach(line => line.split(',').map(x => range(parseInt(x.split('-')[0]), parseInt(x.split('-')[1]))).some((_, i, [a,b]) => a.some(el => b.includes(el)) ? valid++ : null));
 
     console.log(valid)
     
