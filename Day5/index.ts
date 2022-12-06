@@ -40,19 +40,7 @@ aInput.forEach(line => {
 
 stack1 = stack1.map(s => s.split('').reverse().join(''))
 
-/*
-    [M]             [Z]     [V]     
-    [Z]     [P]     [L]     [Z] [J] 
-[S] [D]     [W]     [W]     [H] [Q] 
-[P] [V] [N] [D]     [P]     [C] [V] 
-[H] [B] [J] [V] [B] [M]     [N] [P] 
-[V] [F] [L] [Z] [C] [S] [P] [S] [G] 
-[F] [J] [M] [G] [R] [R] [H] [R] [L] 
-[G] [G] [G] [N] [V] [V] [T] [Q] [F] 
- 1   2   3   4   5   6   7   8   9 
-*/
-
-let crates: string[] = Array.from(stack1);
+let crates: string[] = [...stack1];
 
 (async () => {
 
@@ -72,7 +60,7 @@ for(let i = 0; i < crates.length; i++) {
 
 console.log("p1: ", b.join(''));
 
-crates = Array.from(stack1);
+crates = [...stack1];
 
 (async () => {
 
