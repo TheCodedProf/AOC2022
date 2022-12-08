@@ -149,5 +149,3 @@ out2.forEach((row, y) => {
 console.log(currentLargest);
 p2 = out2[currentLargest[1]][currentLargest[0]];
 console.log("p2: ", p2);
-
-// console.log(out2)
